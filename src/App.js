@@ -8,17 +8,25 @@ class App extends Component {
     this.state = {
       categories: [],
     };
+    this.handleClick = this.handleClick.bind(this);
   }
 
   async componentDidMount() {
     const data = await getCategories();
     this.setState({ categories: data });
-    const product = await getProductsFromCategoryAndQuery(
-      'MLB1055',
-      'Motorola',
-    );
-    console.log(product);
   }
+
+  // eslint-disable-next-line class-methods-use-this
+  async handleClick() {
+    const product = await getProductsFromCategoryAndQuery('MLB1055', 'Motorola');
+    console.log(product);
+    return product;
+  }
+
+  // async function updateData(a, b){
+  //   let [ res1, res2 ] = await Promise.all(call1, call2);
+  //   return  [ res1, res2 ]
+  // }
 
   render() {
     const { categories } = this.state;
@@ -28,6 +36,7 @@ class App extends Component {
           <div key={cat.id} style={{ border: 'solid 5px' }}>
             <p>{cat.id}</p>
             <p>{cat.name}</p>
+            <button type="button" onClick={this.handleClick}>Add To Console Cart</button>
           </div>
         ))}
       </div>
