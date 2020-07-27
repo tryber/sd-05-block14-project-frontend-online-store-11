@@ -1,13 +1,13 @@
-.Product-List{
+.Product-List {
   display: flex;
-  margin: 0;
   justify-content: space-around;
+  margin: 0;
 }
-.Product-List ul li{
+.Product-List ul li {
+  border: 1px solid;
   list-style: none;
-  border: 1px solid ;
-  padding: 5px ;
-  margin: 5px ;
+  margin: 5px;
+  padding: 5px;
 }
 
 .Product-List ul li:hover {

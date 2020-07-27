@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import {
   getCategories,
-  getProductsFromCategoryAndQuery,
+  // getProductsFromCategoryAndQuery,
 } from '../services/api';
 import './ProductListing.css';
 
@@ -14,16 +14,18 @@ import './ProductListing.css';
 class ProductListing extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      categories: [],
-    };
-  //  this.handleClick = this.handleClick.bind(this);
+    this.state = { categories: [] };
+    //  this.handleClick = this.handleClick.bind(this);
   }
   // Nao Apagar - Aqui é como se usa a API
 
   async componentDidMount() {
     const data = await getCategories();
     console.log(data);
+    this.updateState(data);
+  }
+
+  updateState(data) {
     this.setState({ categories: data });
   }
 
@@ -37,7 +39,7 @@ class ProductListing extends Component {
     const { categories } = this.state;
 
     return (
-      <div className='Product-List'>
+      <div className="Product-List">
         {/* Não apagar  - Aqui é como se renderiza a  */}
         {/* lista. Apenas uma forma, não necessariamente a pedida nos requisitos */}
         <ul>
