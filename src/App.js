@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import ProductListing from './Components/ProductListing';
+import ProductListing from './components/ProductListing';
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   render() {
     return (
       <BrowserRouter>

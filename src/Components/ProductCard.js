@@ -3,18 +3,19 @@ import React from 'react';
 // import { PropTypes } from 'prop-types';
 
 class ProductCard extends React.Component {
-  //  const { items } = this.props.items
-
   render() {
     return (
       <div>
-        {this.props.items.map((item) => (
-          <div key={item.id}>
-            <p>{item.title}</p>
-            <p>{item.price}</p>
-            <img src={item.thumbnail} alt={item.title} />
-          </div>
-        ))}
+        {this.props.items
+          .map((item) => (
+            <div key={item.id}>
+              <div>
+                <img src={item.thumbnail} alt={item.title} />
+              </div>
+              <p>{item.title}</p>
+              <p>{item.price}</p>
+            </div>
+          ))}
       </div>
     );
   }
