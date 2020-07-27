@@ -1,9 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
-import {
-  getCategories,
-  getProductsFromCategoryAndQuery,
-} from '../services/api';
+// import {
+//   getCategories,
+//   getProductsFromCategoryAndQuery,
+// } from '../services/api';
 
 // Tudo que está comentado será utilizado de uma forma ou outra em algum momento. Não apagar.
 
