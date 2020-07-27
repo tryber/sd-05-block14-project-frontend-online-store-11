@@ -1,4 +1,4 @@
-.categories-filter {
+.left-side {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -10,6 +10,11 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 10px;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
 }
 
 .categories-list button {

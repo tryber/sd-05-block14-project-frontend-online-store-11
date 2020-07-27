@@ -1,15 +1,16 @@
 import React from 'react';
+import './ProductCard.css'
 
 class ProductCard extends React.Component {
   render() {
     return (
-      <div>
+      <div className="card-container">
         {this.props.items
           .map((item) => (
-            <div key={item.id}>
+            <div key={item.id} className="card-info">
               <img src={item.thumbnail} alt={item.title} />
-              <p>{item.title}</p>
-              <p>{item.price}</p>
+              <strong><p>{item.title}</p></strong>
+              <p>${item.price}</p>
             </div>
           ))}
       </div>
