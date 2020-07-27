@@ -4,14 +4,18 @@
   margin: 0;
 }
 
-.Product-List ul li {
+.Product-List div {
+  width: 300px;
+}
+
+.Product-List div span {
   border: 1px solid;
   list-style: none;
   margin: 5px;
   padding: 5px;
 }
 
-.Product-List ul li:hover {
+.Product-List div span:hover {
   background-color: gray;
   color: aliceblue;
 }
