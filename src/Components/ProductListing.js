@@ -1,9 +1,7 @@
-//product list 
-
 import React, { Component } from 'react';
 import * as api from '../services/api';
-import SearchBar from './SearchBar';
 import ProductCard from './ProductCard'
+import '../components/ProductListing.css'
 
 class ProductListing extends Component {
   constructor(props) {
@@ -40,15 +38,14 @@ class ProductListing extends Component {
   render() {
     const { categories, arrayFetch } = this.state;
     return (
-      <div data-testid="category">
-        {categories.map((element) => (
-          <div className={element.id}>
-            <a onClick={() => this.onClickHandler(element.id, element.name)}>
+      <div data-testid="category" className="categories-filter">
+        <div className="categories-list">
+          {categories.map((element) => (
+            <button key={element.id} onClick={() => this.onClickHandler(element.id, element.name)}>
               {element.name}
-            </a>
-          </div>
-        ))}
-        <SearchBar />
+            </button>
+          ))}
+        </div>
         <ProductCard items={arrayFetch} />
       </div>
     )

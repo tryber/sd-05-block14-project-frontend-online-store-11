@@ -1,29 +1,26 @@
-.Product-List {
+.categories-filter {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
-  margin: 0;
+  margin-left: 0;
 }
 
-.Product-List div {
-  width: 300px;
-}
-
-.Product-List div span {
-  border: 1px solid;
-  list-style: none;
-  margin: 5px;
-  padding: 5px;
-}
-
-.Product-List div span:hover {
-  background-color: gray;
-  color: aliceblue;
-}
-
-.search-area {
-  background-color: aqua;
+.categories-list {
   display: flex;
   flex-direction: column;
-  height: 20vh;
-  width: 100%;
+  align-items: flex-start;
+  padding: 10px;
 }
+
+.categories-list button {
+  width: 200px;
+  border: none;
+  background-color: white;
+  margin: 10px;
+  text-align: justify;
+}
+
+button:hover {
+  background-color: rgb(241, 241, 116);
+}
+
