@@ -1,0 +1,16 @@
+.Product-List{
+  display: flex;
+  margin: 0;
+  justify-content: space-around;
+}
+.Product-List ul li{
+  list-style: none;
+  border: 1px solid ;
+  padding: 5px ;
+  margin: 5px ;
+}
+
+.Product-List ul li:hover {
+  background-color: gray;
+  color: aliceblue;
+}
