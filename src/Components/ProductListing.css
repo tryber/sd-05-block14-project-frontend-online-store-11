@@ -15,3 +15,11 @@
   background-color: gray;
   color: aliceblue;
 }
+
+.search-area {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  height: 20vh;
+  width: 100%;
+}

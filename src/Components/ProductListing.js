@@ -14,19 +14,28 @@ import './ProductListing.css';
 class ProductListing extends Component {
   constructor(props) {
     super(props);
-    this.state = { categories: [] };
+    this.state = {
+      categories: [],
+      searchProduct: '',
+    };
     //  this.handleClick = this.handleClick.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
   // Nao Apagar - Aqui é como se usa a API
 
   async componentDidMount() {
     const data = await getCategories();
     console.log(data);
-    this.updateState(data);
+    this.updateStateCategories(data);
   }
 
-  updateState(data) {
+  updateStateCategories(data) {
     this.setState({ categories: data });
+  }
+
+  handleInputChange(event) {
+    const inputText = event.target.value;
+    this.setState({ searchProduct: inputText });
   }
 
   // async handleClick() {
@@ -51,9 +60,13 @@ class ProductListing extends Component {
             </div>
           ))}
         </ul>
-        <h2 data-testid="home-initial-message">
-          Digite algum termo de pesquisa ou escolha uma categoria.
-        </h2>
+        <div className="search-area">
+          <input type="text" onChange={this.handleInputChange} />
+          <h2 data-testid="home-initial-message">
+            Digite algum termo de pesquisa ou escolha uma categoria.
+          </h2>
+          <h3>{this.state.searchProduct}</h3>
+        </div>
       </div>
     );
   }
