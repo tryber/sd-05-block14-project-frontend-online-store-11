@@ -1,8 +1,8 @@
 .card-container {
   align-content: space-around;
   display: flex;
-  flex-direction: row;
-  flex-flow: wrap;
+  /* flex-direction: row; */
+  flex-flow: row wrap;
   width: 800px;
 }
 
