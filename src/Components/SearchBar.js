@@ -11,9 +11,11 @@ class SearchBar extends Component {
           type="text"
           placeholder="Digite algum termo de pesquisa ou escolha uma categoria."
         />
-        <button type="button" 
-        onClick={this.props.click}
-        data-testid="query-button">
+        <button
+          type="button"
+          onClick={this.props.click}
+          data-testid="query-button"
+        >
           Buscar
         </button>
         <p data-testid="home-initial-message">
