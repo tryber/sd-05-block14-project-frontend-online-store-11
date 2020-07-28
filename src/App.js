@@ -4,10 +4,6 @@ import './App.css';
 import ProductListing from './Components/ProductListing';
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   render() {
     return (
       <BrowserRouter>
