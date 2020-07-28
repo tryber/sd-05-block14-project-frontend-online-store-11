@@ -39,10 +39,11 @@ class ProductListing extends Component {
   render() {
     const { categories, arrayFetch } = this.state;
     return (
-      <div data-testid="category" className="left-side">
+      <div className="left-side">
         <div className="categories-list">
           {categories.map((element) => (
             <button
+              data-testid="category"
               type="button"
               key={element.id}
               onClick={() => this.onClickHandler(element.id, element.name)}
