@@ -1,13 +1,13 @@
 .card-container {
+  align-content: space-around;
   display: flex;
   flex-direction: row;
+  flex-flow: wrap;
   width: 800px;
-  align-content: space-around;
-  flex-wrap: wrap;
 }
 
 .card-info {
   margin-top: 50px;
-  width: 150px;
   padding: 10px;
+  width: 150px;
 }

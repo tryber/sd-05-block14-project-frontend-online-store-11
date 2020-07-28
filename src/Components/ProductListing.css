@@ -6,9 +6,9 @@
 }
 
 .categories-list {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   padding: 10px;
 }
 
@@ -18,11 +18,11 @@
 }
 
 .categories-list button {
-  width: 200px;
-  border: none;
   background-color: white;
+  border: none;
   margin: 10px;
   text-align: justify;
+  width: 200px;
 }
 
 button:hover {

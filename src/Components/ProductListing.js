@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import * as api from '../services/api';
-import ProductCard from './ProductCard'
+import ProductCard from './ProductCard';
 import SearchBar from './SearchBar';
-import '../components/ProductListing.css'
+import './ProductListing.css';
 
 class ProductListing extends Component {
   constructor(props) {
@@ -11,29 +11,29 @@ class ProductListing extends Component {
       categories: [],
       searchProduct: '',
       arrayFetch: [],
-    }
+    };
     this.updateStateCategories = this.updateStateCategories.bind(this);
     this.onClickHandler = this.onClickHandler.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
-  updateStateCategories(param) {
-    this.setState({ categories: param })
-  }
-
   async componentDidMount() {
     const data = await api.getCategories();
-    this.updateStateCategories(data)
+    this.updateStateCategories(data);
   }
 
   async onClickHandler(id, product) {
     const products = await api.getProductsFromCategoryAndQuery(id, product);
-    this.setState({ arrayFetch: products.results })
+    this.setState({ arrayFetch: products.results });
+  }
+
+  updateStateCategories(param) {
+    this.setState({ categories: param });
   }
 
   handleInputChange(event) {
     const inputText = event.target.value;
-    this.setState({ searchProduct: inputText })
+    this.setState({ searchProduct: inputText });
   }
 
   render() {
@@ -42,7 +42,11 @@ class ProductListing extends Component {
       <div data-testid="category" className="left-side">
         <div className="categories-list">
           {categories.map((element) => (
-            <button key={element.id} onClick={() => this.onClickHandler(element.id, element.name)}>
+            <button
+              type="button"
+              key={element.id}
+              onClick={() => this.onClickHandler(element.id, element.name)}
+            >
               {element.name}
             </button>
           ))}
@@ -52,9 +56,8 @@ class ProductListing extends Component {
           <ProductCard items={arrayFetch} />
         </div>
       </div>
-    )
+    );
   }
 }
-
 
 export default ProductListing;
