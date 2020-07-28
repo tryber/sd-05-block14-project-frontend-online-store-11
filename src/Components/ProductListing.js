@@ -1,16 +1,8 @@
-import React from 'react';
-import { Component } from 'react';
-import {
-  getCategories,
-  getProductsFromCategoryAndQuery,
-} from '../services/api';
-import './ProductListing.css';
+import React, { Component } from 'react';
+import * as api from '../services/api';
 import ProductCard from './ProductCard';
-
-// Tudo que está comentado será utilizado de uma forma ou outra em algum momento. Não apagar.
-
-// Os códigos comentados abaixo são uma forma de usar API.
-// Que veremos como será utilizado mais para frente.
+import SearchBar from './SearchBar';
+import './ProductListing.css';
 
 class ProductListing extends Component {
   constructor(props) {
@@ -18,28 +10,25 @@ class ProductListing extends Component {
     this.state = {
       categories: [],
       searchProduct: '',
-      array: [],
+      arrayFetch: [],
     };
-    //  this.handleClick = this.handleClick.bind(this);
-    this.handleInputChange = this.handleInputChange.bind(this);
+    this.updateStateCategories = this.updateStateCategories.bind(this);
     this.onClickHandler = this.onClickHandler.bind(this);
+    this.handleInputChange = this.handleInputChange.bind(this);
   }
-  // Nao Apagar - Aqui é como se usa a API
 
   async componentDidMount() {
-    const data = await getCategories();
-    console.log(data);
+    const data = await api.getCategories();
     this.updateStateCategories(data);
   }
 
-  async onClickHandler(id, produto) {
-    const product = await getProductsFromCategoryAndQuery(id, produto);
-    console.log(product.results);
-    this.setState({ array: product.results });
+  async onClickHandler(id, product) {
+    const products = await api.getProductsFromCategoryAndQuery(id, product);
+    this.setState({ arrayFetch: products.results });
   }
 
-  updateStateCategories(data) {
-    this.setState({ categories: data });
+  updateStateCategories(param) {
+    this.setState({ categories: param });
   }
 
   handleInputChange(event) {
@@ -48,32 +37,24 @@ class ProductListing extends Component {
   }
 
   render() {
-    const { categories } = this.state;
-
+    const { categories, arrayFetch } = this.state;
     return (
-      <div className="Product-List">
-        <div>
-          {categories.map((cat) => (
-            <div key={cat.id}>
-              <button
-                data-testid="category"
-                onClick={() => this.onClickHandler(cat.id, cat.name)}
-              >
-                {cat.name}
-              </button>
-              <br />
-            </div>
+      <div className="left-side">
+        <div className="categories-list">
+          {categories.map((element) => (
+            <button
+              data-testid="category"
+              type="button"
+              key={element.id}
+              onClick={() => this.onClickHandler(element.id, element.name)}
+            >
+              {element.name}
+            </button>
           ))}
         </div>
-
-        <div className="search-area">
-          <input type="text" onChange={this.handleInputChange} />
-          <h2 data-testid="home-initial-message">
-            Digite algum termo de pesquisa ou escolha uma categoria.
-          </h2>
-          <h3>{this.state.searchProduct}</h3>
-
-          <ProductCard items={this.state.array} />
+        <div className="right-side">
+          <SearchBar />
+          <ProductCard items={arrayFetch} />
         </div>
       </div>
     );
