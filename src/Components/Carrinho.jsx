@@ -1,15 +1,28 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+const produto = {
+  produto: 'calça',
+  quantidade: 1,
+  preco: '100,00',
+};
+
 class Carrinho extends Component {
   constructor(props) {
     super(props);
     this.state = {
       carrinho: [
         {
+          id: 1,
           produto: 'chuteiras',
           quantidade: 2,
           preco: '79,90',
+        },
+        {
+          id: 2,
+          produto: 'camisa',
+          quantidade: 2,
+          preco: '99,90',
         },
       ],
     };
@@ -21,13 +34,13 @@ class Carrinho extends Component {
   }
 
   insereProduto() {
-    const { ...produto } = this.props;
     const { carrinho } = this.state;
     this.setState({ carrinho: [...carrinho, { ...produto }] });
   }
 
   render() {
     const { carrinho } = this.state;
+    console.log(carrinho);
     if (carrinho.length === 0) {
       return (
         <div className="carrinho-vazio">
@@ -43,9 +56,10 @@ class Carrinho extends Component {
         <Link to="/">Continuar comprando</Link>
         <ul>
           {carrinho.map((item) => (
-            <li>{`${item.produto} R$: ${item.preco}`}</li>
+            <li key={item.id}>
+              <div>{`${item.produto} R$: ${item.preco}`}</div>
+            </li>
           ))}
-          {/* <li>{carrinho[1].produto} {carrinho[1].preco} </li> */}
         </ul>
       </div>
     );

@@ -4,20 +4,6 @@ import './App.css';
 import ProductListing from './Components/ProductListing';
 import Carrinho from './Components/Carrinho';
 
-// array para simular os produtos adicionado ao carrinho
-const produto = [
-  {
-    produto: 'camisa',
-    quantidade: 1,
-    preco: '99,90',
-  },
-  {
-    produto: 'chuteiras',
-    quantidade: 2,
-    preco: '79,90',
-  },
-];
-
 class App extends Component {
   // constructor(props) {
   //   super(props);
@@ -31,7 +17,7 @@ class App extends Component {
         </header>
         <Switch>
           <Route exact path="/" component={ProductListing} />
-          <Route path="/carrinho/" render={(props) => <Carrinho {...props} produto={produto} />} />
+          <Route path="/carrinho/" component={Carrinho} />
         </Switch>
       </BrowserRouter>
     );
