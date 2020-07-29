@@ -11,14 +11,21 @@ class DetailedView extends Component {
       detailsTitle,
       detailsThumbnail,
       detailsPrice,
+      isFreeShipping,
     } = props.location.state;
     this.state = {
-      detailsId,
-      detailsTitle,
-      detailsThumbnail,
-      detailsPrice,
+      id: detailsId,
+      title: detailsTitle,
+      thumbnail: detailsThumbnail,
+      price: detailsPrice,
+      shipping: isFreeShipping,
     };
-
+    // this.state = {
+    //   id: detailsId,
+    //   title: detailsTitle,
+    //   thumbnail: detailsThumbnail,
+    //   price: detailsPrice,
+    // };
     console.log(detailsTitle);
   }
 
@@ -35,16 +42,16 @@ class DetailedView extends Component {
             adicinar
           </button>
         </div>
-        <div key={this.state.detailsId} className="card-info-details">
+        <div key={this.state.id} className="card-info-details">
           <img
-            src={this.state.detailsThumbnail}
-            alt={this.state.detailsTitle}
+            src={this.state.thumbnail}
+            alt={this.state.title}
           />
           <div>
             <strong>
-              <p data-testid="product-detail-name">{this.state.detailsTitle}</p>
+              <p data-testid="product-detail-name">{this.state.title}</p>
             </strong>
-            <p>${this.state.detailsPrice}</p>
+            <p>${this.state.price}</p>
           </div>
         </div>
         <Review />

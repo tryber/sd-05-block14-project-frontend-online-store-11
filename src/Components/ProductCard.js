@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 import './ProductCard.css';
 import ShoppingCart from './Shopping-Cart';
 
+const ButtonC = (props) => (
+  <div>
+    <button
+      data-testid="product-add-to-cart"
+      onClick={() => ShoppingCart.adicionaProduto(props.item)}
+      type="button"
+    >
+      adicinar
+    </button>
+  </div>
+);
+
 class ProductCard extends React.Component {
   constructor(props) {
     super(props);
@@ -23,19 +35,14 @@ class ProductCard extends React.Component {
                   detailsTitle: item.title,
                   detailsThumbnail: item.thumbnail,
                   detailsPrice: item.price,
+                  isFreeShipping: item.shipping.free_shipping,
                 },
               }}
             >
               <img src={item.thumbnail} alt={item.title} />
               <p>{`${item.title} - $ ${item.price}`}</p>
             </Link>
-            <button
-              data-testid="product-add-to-cart"
-              onClick={() => ShoppingCart.adicionaProduto(item)}
-              type="button"
-            >
-              adicinar
-            </button>
+            <ButtonC item={item} />
           </div>
         ))}
       </div>

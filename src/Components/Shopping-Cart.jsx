@@ -56,7 +56,7 @@ class Carrinho extends Component {
               <div data-testid="shopping-cart-product-name">{item.title}</div>
               <div>Unidades: {item.quantity}</div>
               <div>R$: {item.price}</div>
-              <div>Gratis: {item.shipping}</div>
+              <div>Frete grátis: {item.shipping}</div>
             </li>
           ))}
         </ul>
