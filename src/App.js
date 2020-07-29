@@ -10,7 +10,10 @@ class App extends Component {
     return (
       <BrowserRouter>
         <header className="App-header">
-          <Link to="/carrinho"><img data-testid="shopping-cart-button" src="../cart-1.png" alt="carrinho de compras" height="50px" /></Link>
+          <Link to="/carrinho">
+            <span data-testid="shopping-cart-size">0</span>
+            <img data-testid="shopping-cart-button" src="../cart-1.png" alt="carrinho de compras" height="50px" />
+          </Link>
         </header>
         <Switch>
           <Route exact path="/" component={ProductListing} />

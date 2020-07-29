@@ -35,7 +35,7 @@ class ProductCard extends React.Component {
                 <strong><p>{item.title}</p></strong>
                 <p>${item.price}</p>
               </Link>
-              <button onClick={() => ShoppingCart.adicionaProduto(item)} type="button">adicinar</button>
+              <button data-testid="product-add-to-cart" onClick={() => ShoppingCart.adicionaProduto(item)} type="button">adicinar</button>
 
             </div>
           ))}
