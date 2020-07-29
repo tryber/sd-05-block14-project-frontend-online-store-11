@@ -2,13 +2,9 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import ProductListing from './Components/ProductListing';
-import Carrinho from './Components/Carrinho';
+import ShoppingCart from './Components/Shopping-Cart';
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   render() {
     return (
       <BrowserRouter>
@@ -17,7 +13,7 @@ class App extends Component {
         </header>
         <Switch>
           <Route exact path="/" component={ProductListing} />
-          <Route path="/carrinho/" component={Carrinho} />
+          <Route path="/carrinho/" component={ShoppingCart.Carrinho} />
         </Switch>
       </BrowserRouter>
     );

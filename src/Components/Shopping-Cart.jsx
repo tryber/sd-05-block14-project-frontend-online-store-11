@@ -1,41 +1,31 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-const produto = {
-  produto: 'calça',
-  quantidade: 1,
-  preco: '100,00',
-};
+const produto = [];
+
+const adicionaProduto = (item) => { produto.push(item); };
 
 class Carrinho extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      carrinho: [
-        {
-          id: 1,
-          produto: 'chuteiras',
-          quantidade: 2,
-          preco: '79,90',
-        },
-        {
-          id: 2,
-          produto: 'camisa',
-          quantidade: 2,
-          preco: '99,90',
-        },
-      ],
+      carrinho: [],
+      total: 0,
     };
     this.insereProduto = this.insereProduto.bind(this);
   }
 
   componentDidMount() {
-    this.insereProduto();
+    this.insereProduto(produto);
   }
 
-  insereProduto() {
+  insereProduto(item) {
+    // if (produto.length > 1) item = produto.pop();
     const { carrinho } = this.state;
-    this.setState({ carrinho: [...carrinho, { ...produto }] });
+    this.setState({ carrinho: [...carrinho, ...item] });
+
+   // if (carrinho.length !== 0) this.setState({ carrinho: [...carrinho, { id: product.id, title: product.title, price: product.price }] });
+    // else this.setState({ carrinho: [{ id: product.id, title: product.title, price: product.price }] });
   }
 
   render() {
@@ -44,6 +34,7 @@ class Carrinho extends Component {
     if (carrinho.length === 0) {
       return (
         <div className="carrinho-vazio">
+          <Link to="/">Ir as compras!</Link>
           <div className="">
             <h2 data-testid="shopping-cart-empty-message">Seu carrinho está vazio</h2>
             <img src="../cart-3.png" alt="imagem de um carrinho vazio" width="300px" />
@@ -55,9 +46,9 @@ class Carrinho extends Component {
       <div>
         <Link to="/">Continuar comprando</Link>
         <ul>
-          {carrinho.map((item) => (
+          {this.state.carrinho.map((item) => (
             <li key={item.id}>
-              <div>{`${item.produto} R$: ${item.preco}`}</div>
+              <div>{item.title}</div><div>R$:{item.price}</div>
             </li>
           ))}
         </ul>
@@ -66,4 +57,5 @@ class Carrinho extends Component {
   }
 }
 
-export default Carrinho;
+
+export default { Carrinho, adicionaProduto };

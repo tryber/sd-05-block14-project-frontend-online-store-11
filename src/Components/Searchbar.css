@@ -1,0 +1,11 @@
+.search-area {
+  height: auto;
+}
+
+input {
+  border-radius: 10px 10px;
+  border-width: 0.5px;
+  height: 50px;
+  margin-top: 10px;
+  width: 800px;
+}
