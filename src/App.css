@@ -13,15 +13,24 @@
   }
 }
 
+/* barra do topo onde aparede o icone do carrinho com quantidade de produtos */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  position: relative;
+  /* height: 20vh; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: calc(10px + 2vmin);
+  color: rgb(136, 43, 43);
+  z-index: 0;
+}
+
+/* pagina vazia do carrinho */
+.carrinho-vazio { 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center; 
 }
 
 .App-link {

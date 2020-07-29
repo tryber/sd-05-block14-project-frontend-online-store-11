@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './DetailedView.css';
 import Review from './Review';
+import ShoppingCart from './Shopping-Cart';
 
 class DetailedView extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class DetailedView extends Component {
       <div className="detailed-view-page">
         <div className="shopping-cart-link">
           <button>Placeholder: para levar ao carrinho de compras</button>
+          <button data-testid="product-add-to-cart" onClick={() => ShoppingCart.adicionaProduto(this.state)} type="button">adicinar</button>
         </div>
         <div key={this.state.detailsId} className="card-info-details" >
           <img src={this.state.detailsThumbnail} alt={this.state.detailsTitle} />
