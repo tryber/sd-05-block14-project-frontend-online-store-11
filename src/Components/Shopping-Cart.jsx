@@ -23,33 +23,16 @@ class Carrinho extends Component {
     const { carrinho } = this.state;
     console.log(item);
     let produtoPronto = {};
-    // const produtoPronto = { id: cada.id, title: cada.title, price: cada.price, quantity: 1 };
     const array = [];
     if (carrinho.length === 0) {
       item.forEach((cada) => {
-        const { free_shipping } = { ...cada.shipping };
-        produtoPronto = { id: cada.id, title: cada.title, price: cada.price, quantity: 1, shipping: free_shipping ? 'sim' : 'não' };
-        // if (array.includes(produtoPronto)) {
-        //   const index = array.indexOf(produtoPronto);
-        //   array[index].quantity += 1;
-
-        // this.incrementaProduto(achouProduto);
-        // }
+        const { free_shipping: freeShipping } = { ...cada.shipping };
+        produtoPronto = { id: cada.id, title: cada.title, price: cada.price, quantity: 1, shipping: freeShipping ? 'sim' : 'não' };
         array.push(produtoPronto);
-        // this.incrementaProduto(produtoPronto);
       });
       this.setState({ carrinho: [...array], total: 0 });
     }
   }
-
-  // incrementaProduto(counter) {
-  //   const { carrinho } = this.state;
-  //   if (carrinho.length !== 0) {
-  //     const index = carrinho.indexOf(counter);
-  //     carrinho[index].quantity += 1;
-  //   }
-  //   this.setState({ carrinho: [...carrinho, counter] });
-  // }
 
   render() {
     const { carrinho } = this.state;
@@ -71,20 +54,9 @@ class Carrinho extends Component {
           {this.state.carrinho.map((item) => (
             <li key={item.id}>
               <div data-testid="shopping-cart-product-name">{item.title}</div>
-              <div>
-              {console.log(item.id)}
-                Unidades:
-                {item.quantity}
-              </div>
-              <div>
-                R$:
-                {item.price}
-              </div>
-              <div>
-                Gratis:
-                {item.shipping}
-              </div>
-
+              <div>Unidades: {item.quantity}</div>
+              <div>R$: {item.price}</div>
+              <div>Gratis: {item.shipping}</div>
             </li>
           ))}
         </ul>
