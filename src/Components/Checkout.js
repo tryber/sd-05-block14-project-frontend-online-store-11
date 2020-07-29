@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 import ProductCard from './ProductCard';
 import './Checkout.css';
-import * as query from '../__mocks__/query';
 
 class Checkout extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      itemsExemplo: query.results,
-      total: 'R$ 50000000',
+
     };
   }
 
