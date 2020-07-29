@@ -14,7 +14,11 @@ class ProductCard extends React.Component {
         {this.props.items
           .map((item) => (
 
-            <div key={item.id} className="card-info" >
+            <div
+              key={item.id}
+              data-testid="product"
+              className="card-info"
+            >
               <Link
                 data-testid="product-detail-link"
                 to={{

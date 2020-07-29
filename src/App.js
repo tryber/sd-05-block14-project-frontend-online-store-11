@@ -10,6 +10,7 @@ class App extends Component {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={ProductListing} />
+          {/* <Route exact path="/" component={ProductListing} /> */}
           <Route path="/details/:id" component={DetailedView} />
         </Switch>
       </BrowserRouter>
