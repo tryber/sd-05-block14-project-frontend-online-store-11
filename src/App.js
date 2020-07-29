@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import ProductListing from './Components/ProductListing';
 import ShoppingCart from './Components/Shopping-Cart';
+import DetailedView from './Components/DetailedView';
 
 class App extends Component {
   render() {
@@ -13,6 +14,7 @@ class App extends Component {
         </header>
         <Switch>
           <Route exact path="/" component={ProductListing} />
+          <Route path="/details/:id" component={DetailedView} />
           <Route path="/carrinho/" component={ShoppingCart.Carrinho} />
         </Switch>
       </BrowserRouter>
