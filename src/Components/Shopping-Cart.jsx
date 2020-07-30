@@ -54,12 +54,18 @@ class Carrinho extends Component {
           {this.state.carrinho.map((item) => (
             <li key={item.id}>
               <div data-testid="shopping-cart-product-name">{item.title}</div>
-              <div>Unidades: {item.quantity}</div>
+              <div data-testid="shopping-cart-product-quantity">Unidades: {item.quantity}</div>
               <div>R$: {item.price}</div>
               <div>Frete grátis: {item.shipping}</div>
             </li>
           ))}
         </ul>
+        <Link to={{
+          pathname: "/checkout",
+          state: {
+            cart: this.state.carrinho,
+          },
+        }}><button data-testid="checkout-products">Finalizar Compra</button></Link> 
       </div>
     );
   }

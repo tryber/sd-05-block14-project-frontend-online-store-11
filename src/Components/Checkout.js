@@ -5,10 +5,25 @@ import './Checkout.css';
 class Checkout extends Component {
   constructor(props) {
     super(props);
-
+    const { cart } = props.location.state
     this.state = {
-
+      cart: cart,
+      total: 0
     };
+  }
+
+  finalProductList = (item) => {
+    this.state.total = this.state.total + (item.price * item.quantity)
+    console.log(this.state.total)
+    return (
+      <li key={item.id}>
+        <img src={item.thumbnail} ></img>
+        <div data-testid="shopping-cart-product-name">{item.title}</div>
+        <div data-testid="shopping-cart-product-quantity">Unidades: {item.quantity}</div>
+        <div>R$: {item.price}</div>
+        <div>Frete grátis: {item.shipping}</div>
+      </li>
+  )
   }
 
   render() {
@@ -16,11 +31,10 @@ class Checkout extends Component {
       <div className="checkout-page">
         <section className="checkout-products">
           <h3>Revise seus Produtos</h3>
-
-          {/* produtos que virão do carrinho */}
-          <ProductCard items={this.state.itemsExemplo} />
-
-          <p>Total: {this.state.total}</p>
+          <ul className="final-product-list">
+            {this.state.cart.map((item) => this.finalProductList(item, this.state))}
+          </ul>
+          <h4>Total: {this.state.total}</h4>
         </section>
 
         <section className="checkout-info">
@@ -31,7 +45,7 @@ class Checkout extends Component {
             <input data-testid="checkout-cpf" placeholder="CPF" type="text" />
             <input data-testid="checkout-phone" placeholder="Telefone Completo" type="text" />
             <input data-testid="checkout-cep" placeholder="CEP" type="text" />
-            <input data-testid="checkout-adress" placeholder="Endereço" type="text" />
+            <input data-testid="checkout-address" placeholder="Endereço" type="text" />
             <div><button className="input-button" type="button">Enviar</button></div>
           </form>
         </section>
