@@ -33,7 +33,6 @@ class ProductListing extends Component {
       searchProduct,
     );
     // ao clicar numa categoria, sobe um array com os produtos para o state
-    console.log(categoryId);
     this.setState({
       selectedCategory: categoryId,
       arrayFetch: produtos.results,
