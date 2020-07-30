@@ -11,7 +11,7 @@ class NavBarCarrinho extends React.Component {
       <nav>
         <div data-testid="shopping-cart-size">
           <span className="" style={{ width: 30 }}>
-            {this.props.qtdProdutos}
+            {this.props._CArrinhoqtdProdutos}
           </span>
           {/* <img
             data-testid="shopping-cart-button"
