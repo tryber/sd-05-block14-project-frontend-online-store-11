@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProductCard.css';
-import ShoppingCart from './Shopping-Cart';
+import ShoppingCart from './ShoppingCart';
 
 const ButtonC = (props) => (
   <div>
