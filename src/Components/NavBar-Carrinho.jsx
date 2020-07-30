@@ -6,7 +6,7 @@ class NavBarCarrinho extends React.Component {
       <nav>
         <div data-testid="shopping-cart-size">
           <span className="" style={{ width: 30 }}>
-            {this.props.qtdProdutos} Items
+            {/* {this.props.qtdProdutos} Items */}
           </span>
         </div>
       </nav>

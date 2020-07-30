@@ -16,7 +16,7 @@ class Checkout extends Component {
     console.log(this.state.total)
     return (
       <li key={item.id}>
-        <img src={item.thumbnail} ></img>
+        <img src={item.thumbnail} alt={item.title} ></img>
         <div data-testid="shopping-cart-product-name">{item.title}</div>
         <div data-testid="shopping-cart-product-quantity">Unidades: {item.quantity}</div>
         <div>R$: {item.price}</div>
