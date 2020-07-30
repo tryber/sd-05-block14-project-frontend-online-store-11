@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './DetailedView.css';
 import Review from './Review';
-import ShoppingCart from './Shopping-Cart';
+import ShoppingCart from './ShoppingCart';
 
 class DetailedView extends Component {
   constructor(props) {
@@ -33,9 +33,8 @@ class DetailedView extends Component {
     return (
       <div className="detailed-view-page">
         <div className="shopping-cart-link">
-          <button>Placeholder: para levar ao carrinho de compras</button>
           <button
-            data-testid="product-add-to-cart"
+            data-testid="product-detail-add-to-cart"
             onClick={() => ShoppingCart.adicionaProduto(this.state)}
             type="button"
           >
