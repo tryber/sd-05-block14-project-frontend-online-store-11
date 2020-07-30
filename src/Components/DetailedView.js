@@ -22,34 +22,34 @@ class DetailedView extends Component {
     };
   }
 
-    render() {
-      return (
-        <div className="detailed-view-page">
-          <div className="shopping-cart-link">
-            <button
-              data-testid="product-detail-add-to-cart"
-              onClick={() => ShoppingCart.adicionaProduto(this.state)}
-              type="button"
-            >
-              Adicionar
-          </button>
-          </div>
-          <div key={this.state.id} className="card-info-details">
-            <img
-              src={this.state.thumbnail}
-              alt={this.state.title}
-            />
-            <div>
-              <strong>
-                <p data-testid="product-detail-name">{this.state.title}</p>
-              </strong>
-              <p>${this.state.price}</p>
-            </div>
-          </div>
-          <Review />
+  render() {
+    return (
+      <div className="detailed-view-page">
+        <div className="shopping-cart-link">
+          <button
+            data-testid="product-detail-add-to-cart"
+            onClick={() => ShoppingCart.adicionaProduto(this.state)}
+            type="button"
+          >
+            Adicionar
+        </button>
         </div>
-      );
-    }
+        <div key={this.state.id} className="card-info-details">
+          <img
+            src={this.state.thumbnail}
+            alt={this.state.title}
+          />
+          <div>
+            <strong>
+              <p data-testid="product-detail-name">{this.state.title}</p>
+            </strong>
+            <p>${this.state.price}</p>
+          </div>
+        </div>
+        <Review />
+      </div>
+    );
+  }
   }
 
 export default DetailedView;

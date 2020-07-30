@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import CadaItem from './CadaItem';
+import CarrinhoVazio from './CarrinhoVazio';
 
 const produto = [];
-let status = 0;
+// let status = 0;
 
 
 // const statusCarrinho = async (items) => {
@@ -41,7 +42,7 @@ class Carrinho extends Component {
     let produtoPronto;
     item.forEach((cada) => {
       const { free_shipping: freeShipping } = { ...cada.shipping };
-      produtoPronto = { id: cada.id, title: cada.title, price: cada.price, quantity: 1, shipping: freeShipping ? 'sim' : 'não' };
+      produtoPronto = { id: cada.id, title: cada.title, thumbnail: cada.thumbnail, price: cada.price, quantity: 1, shipping: freeShipping ? 'sim' : 'não' };
       array.push(produtoPronto);
       this.setState({ carrinho: [...carrinho, ...array] });
     });
@@ -74,15 +75,7 @@ class Carrinho extends Component {
     const { carrinho } = this.state;
     if (carrinho.length === 0) {
       return (
-        <div className="carrinho-vazio">
-          <Link to="/">
-            Ir as compras!
-          </Link>
-          <main className="">
-            <h2 data-testid="shopping-cart-empty-message">Seu carrinho está vazio</h2>
-            <img src="../cart-3.png" alt="imagem de um carrinho vazio" width='300px' />
-          </main>
-        </div>
+        <CarrinhoVazio />
       );
     }
     return (
@@ -99,16 +92,17 @@ class Carrinho extends Component {
             />
           ))}
         </ul>
-        <Link to={{
-          pathname: "/checkout",
-          state: {
-            cart: this.state.carrinho,
-          },
-        }}><button data-testid="checkout-products">Finalizar Compra</button></Link> 
+        <Link
+          to={{
+            pathname: '/checkout',
+            state: { cart: this.state.carrinho },
+          }}
+        ><button data-testid="checkout-products">Finalizar Compra</button>
+        </Link>
       </div>
     );
   }
 }
 
-// console.log(status)
-export default { Carrinho, adicionaProduto, status };
+// console.log(status) -retirei "export default status" por causa do codeclimate
+export default { Carrinho, adicionaProduto };

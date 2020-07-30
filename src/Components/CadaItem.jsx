@@ -1,17 +1,23 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class CadaItem extends Component {
   render() {
     const { aumentaQuantidade, diminuiQuantidade, deletaItem, item } = this.props;
-    const { id, title, price, quantity, shipping } = item;
+    const { id, title, price, quantity, shipping, thumbnail } = item;
     return (
       <li key={id}>
+        <img src={thumbnail} alt={title} />
         <p data-testid="shopping-cart-product-name">{title}</p>
         <p data-testid="shopping-cart-product-quantity">Unidades:{quantity}</p>
-        <p>{`R$:${price}`}</p>wf
+        <p>{`R$:${price}`}</p>
 
         <div>
-          <button data-testid="product-increase-quantity" onClick={() => aumentaQuantidade(item)} type="button"> mais </button>
+          <button
+            data-testid="product-increase-quantity"
+            onClick={() => aumentaQuantidade(item)}
+            type="button"
+          > mais
+          </button>
           <button
             data-testid="product-decrease-quantity"
             onClick={() => diminuiQuantidade(item)}
