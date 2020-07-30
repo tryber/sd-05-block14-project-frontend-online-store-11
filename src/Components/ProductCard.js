@@ -16,7 +16,7 @@ const ButtonC = (props) => (
 );
 
 const FreteGratis = (props) => (
-  (props.isFree) ? <p data-testid="free-shipping">frete grátis</p> : null
+  (props.isFree) ? <p data-testid="free-shipping">Frete Grátis</p> : null
 );
 
 const Card = (props) => (
@@ -27,6 +27,7 @@ const Card = (props) => (
         to={{
           pathname: `/details/${item.id}`,
           state: {
+            detailsIsProductAvailable: item.available_quantity,
             detailsId: item.id,
             detailsTitle: item.title,
             detailsThumbnail: item.thumbnail,

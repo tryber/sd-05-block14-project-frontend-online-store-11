@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ProductCard from './ProductCard';
 import './Checkout.css';
 
 class Checkout extends Component {
@@ -7,7 +6,7 @@ class Checkout extends Component {
     super(props);
     const { cart } = props.location.state
     this.state = {
-      cart: cart,
+      cart,
       total: 0
     };
   }
@@ -34,7 +33,7 @@ class Checkout extends Component {
           <ul className="final-product-list">
             {this.state.cart.map((item) => this.finalProductList(item, this.state))}
           </ul>
-          <h4>Total: {this.state.total}</h4>
+          <h4>Total: {(this.state.total).toFixed(2)}</h4>
         </section>
 
         <section className="checkout-info">

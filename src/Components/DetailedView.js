@@ -31,7 +31,7 @@ class DetailedView extends Component {
               onClick={() => ShoppingCart.adicionaProduto(this.state)}
               type="button"
             >
-              adicinar
+              Adicionar
           </button>
           </div>
           <div key={this.state.id} className="card-info-details">
