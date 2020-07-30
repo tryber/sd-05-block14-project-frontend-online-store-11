@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProductCard.css';
-import ShoppingCart from './Shopping-Cart';
+import ShoppingCart from './ShoppingCart';
+// import NavBarCarrinho from './NavBar-Carrinho';
 
 const ButtonC = (props) => (
   <div>
@@ -24,9 +25,12 @@ const Card = (props) => (
     <div key={item.id} data-testid="product" className="card-info">
       <Link
         data-testid="product-detail-link"
+       // data-testid="product-detail-name" // adicionei essa tag aqui porque  pelo readme tava faltando, acho que alguem confundiu  por ter passado esse codigo pelo link, precisamos consertar....
         to={{
           pathname: `/details/${item.id}`,
           state: {
+            detailsIsProductAvailable: item.available_quantity,
+            // inserir esta linha acima parar tratar o estoque do item no mercado livre
             detailsId: item.id,
             detailsTitle: item.title,
             detailsThumbnail: item.thumbnail,
@@ -37,6 +41,7 @@ const Card = (props) => (
       >
         <img src={item.thumbnail} alt={item.title} />
         <p>{`${item.title} - $ ${item.price}`}</p>
+        {/* <p data-testid="shopping-cart-product-quantity">{`Quantidade: ${available_quantity}`}</p> */}
         <FreteGratis isFree={item.shipping.free_shipping} />
 
       </Link>
