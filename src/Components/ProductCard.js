@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProductCard.css';
 import ShoppingCart from './ShoppingCart';
+import '../App.css'
 
 const ButtonC = (props) => (
   <div>
@@ -10,7 +11,7 @@ const ButtonC = (props) => (
       onClick={() => ShoppingCart.adicionaProduto(props.item)}
       type="button"
     >
-      adicinar
+      adicionar ao carrinho
     </button>
   </div>
 );
@@ -36,7 +37,7 @@ const Card = (props) => (
           },
         }}
       >
-        <img src={item.thumbnail} alt={item.title} />
+        <img src={item.thumbnail} alt={item.title} className="img-product-card"/>
         <p>{`${item.title} - $ ${item.price}`}</p>
         <FreteGratis isFree={item.shipping.free_shipping} />
 

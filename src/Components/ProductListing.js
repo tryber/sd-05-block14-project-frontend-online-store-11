@@ -3,6 +3,8 @@ import * as api from '../services/api';
 import ProductCard from './ProductCard';
 import SearchBar from './SearchBar';
 import './ProductListing.css';
+import '../App.css'
+
 // import categories from '../__mocks__/categories';
 
 class ProductListing extends Component {
@@ -60,6 +62,8 @@ class ProductListing extends Component {
   render() {
     const { categories, arrayFetch } = this.state;
     return (
+      <div>
+      <h4 className="categories-title">Categorias</h4>
       <div className="left-side">
         <div className="categories-list">
           {categories.map((element) => (
@@ -79,10 +83,11 @@ class ProductListing extends Component {
             click={this.handleInputClick}
           />
 
-          {this.state.searchProduct}
+          {/* {this.state.searchProduct} */}
 
           <ProductCard items={arrayFetch} />
         </div>
+      </div>
       </div>
     );
   }

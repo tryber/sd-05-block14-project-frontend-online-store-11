@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Checkout.css';
+import '../App.css'
 
 class Checkout extends Component {
   constructor(props) {

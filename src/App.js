@@ -6,13 +6,20 @@ import DetailedView from './Components/DetailedView';
 import NavBarCarrinho from './Components/NavBar-Carrinho';
 import ProductListing from './Components/ProductListing';
 import ShoppingCart from './Components/ShoppingCart';
+import './index.css';
+
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <header className="App-header">
-          <Link to="/carrinho">
+          <img 
+          src="https://logodownload.org/wp-content/uploads/2016/08/Mercado-Livre-logo.png"
+          className="logo"
+          height="100px"
+          />
+          <Link to="/carrinho" className="cart-icon">
             <img
               data-testid="shopping-cart-button"
               src="../cart-1.png"

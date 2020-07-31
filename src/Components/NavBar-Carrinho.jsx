@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css'
 
 class NavBarCarrinho extends React.Component {
   render() {

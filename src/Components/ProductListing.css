@@ -1,8 +1,16 @@
+
 .left-side {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-left: 0;
+}
+
+.categories-title {
+  font-weight: bolder;
+  position: relative;
+  left: 3%;
+  bottom: 0;
 }
 
 .categories-list {
@@ -12,20 +20,28 @@
   padding: 10px;
 }
 
+.categories-list button {
+  background-color: #eee;
+  border: none;
+  margin: 10px;
+  text-align: justify;
+  width: 200px;
+  padding: 5%;
+  border-radius: 6px;
+}
+
+.categories-list button:focus {
+  outline: 1px solid black
+}
+
 .right-side {
   display: flex;
   flex-direction: column;
 }
 
-.categories-list button {
-  background-color: white;
-  border: none;
-  margin: 10px;
-  text-align: justify;
-  width: 200px;
-}
 
-button:hover {
+
+.categories-list button:hover {
   background-color: rgb(241, 241, 116);
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import CadaItem from './CadaItem';
 import CarrinhoVazio from './CarrinhoVazio';
+import '../App.css'
 
 const produto = [];
 // let status = 0;

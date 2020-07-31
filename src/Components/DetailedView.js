@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './DetailedView.css';
 import Review from './Review';
 import ShoppingCart from './ShoppingCart';
+import '../App.css'
 
 class DetailedView extends Component {
   constructor(props) {

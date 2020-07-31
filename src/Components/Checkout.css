@@ -13,10 +13,8 @@
   width: 50%;
 }
 
-input {
+.checkout-info input {
   border: 1px solid #aaa;
-  font-family: sans-serif;
-  font-size: 1rem;
   height: 1.8rem;
   margin: 0.8rem;
   padding: 10px;
