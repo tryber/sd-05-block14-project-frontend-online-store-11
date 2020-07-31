@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import CadaItem from './CadaItem';
 import CarrinhoVazio from './CarrinhoVazio';
 import '../App.css'
+import './ShoppingCart.css'
 
 const produto = [];
 // let status = 0;
@@ -80,9 +81,9 @@ class Carrinho extends Component {
       );
     }
     return (
-      <div>
+      <div className="shopping-cart-page">
         <Link to="/">Continuar comprando</Link>
-        <ul>
+        <ul className="shopping-cart-items-container">
           {carrinho.map((item) => (
             <CadaItem
               key={item.id}

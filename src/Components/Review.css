@@ -1,0 +1,30 @@
+.review-container {
+  align-items: center;
+  align-self: center;
+  border: black solid 1px;
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  width: 50%;
+}
+
+.review-container-title {
+  align-self: flex-start;
+}
+
+.input-email , .input-textarea {
+  border: 1px solid #aaa;
+  height: 1.5rem;
+  margin: 0.8rem;
+  padding: 12px 10px;
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+.input-button {
+  background-color: transparent;
+  margin-left: 0.8rem;
+  padding: 0.8rem;
+  width: fit-content;
+}
+

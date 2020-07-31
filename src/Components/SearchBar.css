@@ -1,18 +1,22 @@
 .search-area {
-  height: 60px; 
+  height: 60px;
+  position: absolute;
+  top: 25%;
+  width: 100%;
 }
 
 .search-area input {
   border-width: 0.5px;
-  height: 45px;
-  width: 70%;
-  margin: 2em 2em 2em 0;
+  height: 35px;
+  width: 60%;
+  margin: auto;
   box-shadow: 0 1px 2px 0 rgb(0, 0, 0.1);
-  padding: 7px 60px 9px 15px;
+  padding: 12px 10px;
+  font-size: 1.1rem;
 }
 
 .search-area button {
-  padding: 1.5em;
+  font-size: 1rem;
   background-color: white;
   height: 55px;
   color: #5a9cf1;

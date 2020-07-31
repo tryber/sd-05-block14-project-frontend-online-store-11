@@ -1,20 +1,38 @@
-.empty-message {
+.empty-cart-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.empty-cart {
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 2%;
+  width: 50%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px;
   text-align: center;
 }
 
 .ir-as-compras {
-  background-color: transparent;
   color: black;
   padding: 10px;
-  text-align: center;
   border-radius: 6px;
+  font-weight: 500;
+  font-size: 2rem
+}
+
+.empty-message {
+  font-weight: 500;
 }
 
 .ir-as-compras:hover {
-  font-weight: bolder;
+  transition: 0.2s;
   color: #39b54a;
 }
 
 .empty-img {
-  margin: 10% auto 10% auto;
+  margin: 5% auto 10% auto;
 }

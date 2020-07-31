@@ -5,26 +5,50 @@
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  
 }
 
 .card-info {
   margin-top: 50px;
   padding: 10px;
   width: 150px;
-  padding:2%;
+  padding: 2%;
   background-color: white;
   margin-left: 10px;
-  box-shadow:  1px 2px 0 rgba(0,0,0,.12);
-  transition: .1s ease-in-out;
+  /* box-shadow:  1px 2px 0 rgba(0,0,0,.12); */
+  transition: .1s ease-in;
   text-align: center;
+  border-radius: 6px;
+}
+
+.card-info p {
+  color: #000;
 }
 
 .card-info:hover {
-  box-shadow: 3px 4px 1px rgba(0,0,0,.12);
+   box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+  transition: box-shadow .2s ease-in-out;
 }
 
+.card-info button {
+  background-color: #3483FA ;
+  color: white;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: none;
+  padding: 0.7em
+}
 
-body {
-  text-align: justify;
+.card-info button:hover {
+  background-color: #2968C8;
+  color: white;
+}
+
+.card-info button:visited {
+  background-color: #82a5db;
+  color: white;
 }

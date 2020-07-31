@@ -8,7 +8,10 @@ const ButtonC = (props) => (
   <div>
     <button
       data-testid="product-add-to-cart"
-      onClick={() => ShoppingCart.adicionaProduto(props.item)}
+      onClick={(event) => {
+        event.target.style.backgroundColor = "#6699cc";
+        ShoppingCart.adicionaProduto(props.item)
+      }}
       type="button"
     >
       adicionar ao carrinho
@@ -38,7 +41,7 @@ const Card = (props) => (
         }}
       >
         <img src={item.thumbnail} alt={item.title} className="img-product-card"/>
-        <p>{`${item.title} - $ ${item.price}`}</p>
+        <p className="card-item-title">{item.title}</p> <p>R$ {item.price}</p>
         <FreteGratis isFree={item.shipping.free_shipping} />
 
       </Link>

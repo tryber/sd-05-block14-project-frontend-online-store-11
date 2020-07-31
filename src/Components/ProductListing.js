@@ -63,7 +63,6 @@ class ProductListing extends Component {
     const { categories, arrayFetch } = this.state;
     return (
       <div>
-      <h4 className="categories-title">Categorias</h4>
       <div className="left-side">
         <div className="categories-list">
           {categories.map((element) => (
