@@ -16,12 +16,15 @@ class Checkout extends Component {
     this.state.total = this.state.total + (item.price * item.quantity);
     console.log(this.state.total);
     return (
-      <li key={item.id}>
-        <img src={item.thumbnail} alt={item.title} />
-        <div data-testid="shopping-cart-product-name">{item.title}</div>
-        <div data-testid="shopping-cart-product-quantity">Unidades: {item.quantity}</div>
-        <div>R$: {item.price}</div>
-        <div>Frete grátis: {item.shipping}</div>
+      <li className="product-checkout" key={item.id}>
+        
+        <div className="product-info-checkout" >
+          <img src={item.thumbnail} alt={item.title} />
+          <div data-testid="shopping-cart-product-name">{item.title}</div>
+          <div data-testid="shopping-cart-product-quantity">Unidades: {item.quantity}</div>
+          <div className="checkout-price">R$: {item.price}</div>
+        </div>
+        
       </li>
     );
   }

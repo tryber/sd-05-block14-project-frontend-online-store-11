@@ -17,13 +17,8 @@
 
 .cart-links {
   display: inline-flex;
-  /* align-items: flex-end; */
-  /* justify-items: flex-end; */
   justify-content: space-evenly;
   margin-top: 5%;
-  /* align-content: flex-end; */
-  /* position: absolute;
-  bottom: -100px */
 }
 
 .continuar-comprando {

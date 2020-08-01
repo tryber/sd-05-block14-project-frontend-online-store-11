@@ -10,9 +10,35 @@
   flex-direction: column;
   margin: 2%;
   padding: 2%;
-  width: 50%;
+  width: 60%;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px
+}
+
+.product-checkout{
+  border-bottom: 1px solid lightgray;
+  padding: 5%;
+}
+
+.product-checkout:first-child {
+  border-top: 1px solid lightgray;
+} 
+
+.final-product-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.checkout-price {
+  font-weight: 300;
+}
+
+.product-info-checkout {
+  width: 500px;
 }
 
 .checkout-info input {
@@ -52,6 +78,5 @@
 
 .checkout-page h3 {
   color: black;
-  border-bottom: 1px solid lightgray;
   padding-bottom: 5%;
 }
