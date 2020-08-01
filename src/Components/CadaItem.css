@@ -1,0 +1,72 @@
+.each-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  padding: 2%;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.shopping-cart-price {
+  font-weight: 300;
+}
+
+.each-item:first-child {
+  border-top: 1px solid lightgray;
+}
+
+.quantity-control {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: 0;
+  width: 200px;
+  min-width: 200px;
+  margin-top: 20%
+}
+
+.quantity-buttons, .quantity-number {
+  font-size: 1.2rem;
+  padding: 2px 18px;
+  margin: 5%;
+  line-height: 40px;
+  font-weight: 900;
+  color: #3483FA;
+  background-color: transparent;
+  border: 0.5px solid lightgray;
+  border-radius: 4px;
+}
+
+.quantity-number {
+  color: #000;
+  font-weight: 500;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.quantity-buttons:hover {
+  color: #5a9cf1;
+  border: 0.5px solid lightgray;
+}
+
+.delete-button {
+  background-color: transparent; 
+  border: none; 
+  color: #000;
+  font-size: 0.9rem;
+  padding: 0;
+  line-height: 40px;
+  font-weight: 500; 
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-left: 55px;
+}
+
+.delete-button:hover {
+  color: tomato;
+}
+
+.info-cart {
+  width: 500px;
+}

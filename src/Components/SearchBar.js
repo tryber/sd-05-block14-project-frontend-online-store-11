@@ -11,8 +11,8 @@ class SearchBar extends Component {
           data-testid="query-input"
           onChange={this.props.change}
           type="text"
-          autocomplete="off"
-          spellcheck="off"
+          autoComplete="off"
+          spellCheck="off"
           placeholder="Digite algum termo de pesquisa ou escolha uma categoria."
         />
         <button

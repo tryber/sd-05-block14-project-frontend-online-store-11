@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ProductCard.css';
 import ShoppingCart from './ShoppingCart';
 import '../App.css'
+import './ProductCard.css';
 
 const ButtonC = (props) => (
   <div>
@@ -20,7 +20,7 @@ const ButtonC = (props) => (
 );
 
 const FreteGratis = (props) => (
-  (props.isFree) ? <p data-testid="free-shipping">Frete Grátis</p> : null
+  (props.isFree) ? <p data-testid="free-shipping" style={{color: "green"}}>Frete Grátis</p> : null
 );
 
 const Card = (props) => (

@@ -16,7 +16,6 @@
 }
 
 .checkout-info input {
-  border: 1px solid #aaa;
   height: 1.8rem;
   margin: 0.8rem;
   width: 40%;
@@ -52,5 +51,7 @@
 }
 
 .checkout-page h3 {
-  color: black
+  color: black;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 5%;
 }

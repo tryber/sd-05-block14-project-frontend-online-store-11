@@ -21,11 +21,13 @@
   padding: 10px;
   border-radius: 6px;
   font-weight: 500;
-  font-size: 2rem
+  font-size: 2rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .empty-message {
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .ir-as-compras:hover {
@@ -34,5 +36,5 @@
 }
 
 .empty-img {
-  margin: 5% auto 10% auto;
+  margin: 1rem auto auto auto;  
 }

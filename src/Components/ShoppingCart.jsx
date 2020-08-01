@@ -82,7 +82,7 @@ class Carrinho extends Component {
     }
     return (
       <div className="shopping-cart-page">
-        <Link to="/">Continuar comprando</Link>
+
         <ul className="shopping-cart-items-container">
           {carrinho.map((item) => (
             <CadaItem
@@ -93,14 +93,19 @@ class Carrinho extends Component {
               deletaItem={this.deletaItem}
             />
           ))}
-        </ul>
-        <Link
+          <div className="cart-links">
+          <Link to="/"><button className="continuar-comprando">Continuar comprando</button></Link>
+          <Link
           to={{
             pathname: '/checkout',
             state: { cart: this.state.carrinho },
           }}
-        ><button data-testid="checkout-products">Finalizar Compra</button>
-        </Link>
+          ><button className="finalizar-compra" data-testid="checkout-products">Finalizar Compra</button>
+          </Link>
+        </div>
+        </ul>
+        
+        
       </div>
     );
   }

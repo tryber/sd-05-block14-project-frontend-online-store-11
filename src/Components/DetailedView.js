@@ -26,19 +26,22 @@ class DetailedView extends Component {
   render() {
     return (
       <div className="detailed-view-page">
-        <div className="shopping-cart-link">
-          <button
-            data-testid="product-detail-add-to-cart"
-            onClick={() => ShoppingCart.adicionaProduto(this.state)}
-            type="button"
-          >
-            Adicionar
-        </button>
-        </div>
+        
         <div key={this.state.id} className="card-info-details">
+          <div className="shopping-cart-link">
+            <button
+              data-testid="product-detail-add-to-cart"
+              onClick={() => ShoppingCart.adicionaProduto(this.state)}
+              type="button"
+            >
+              Adicionar
+            </button>
+          </div>
           <img
             src={this.state.thumbnail}
             alt={this.state.title}
+            height="90px"
+            width="90px"
           />
           <div>
             <strong>

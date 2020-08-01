@@ -8,15 +8,13 @@ class Review extends Component {
       <div className="review-container">
         <h3 className="review-container-title">Avaliações</h3>
         <form className="review-form">
-          <div>
             <input className="input-email" placeholder="Email" type="text" />
             <textarea
               data-testid="product-detail-evaluation"
               className="input-textarea"
-              placeholder="Mensagem (opcional)"
+              placeholder="Mensagem"
               rows="5"cols="60"
             />
-          </div>
           <div><button className="input-button" type="button">Avaliar</button></div>
         </form>
       </div>

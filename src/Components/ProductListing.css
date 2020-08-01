@@ -1,9 +1,15 @@
-
 .left-side {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: auto;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 5rem  
 }
 
 .categories-list {
@@ -21,18 +27,15 @@
   width: 200px;
   padding: 5%;
   border-radius: 6px;
-  font-size: 0.9rem;
-}
-
-.right-side {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 5rem
+  font-size: 0.9rem;  
 }
 
 .categories-list button:hover {
   transition: 0.3s;
   background-color: rgb(180, 180, 180);
   color: #000;
+}
+
+.free-shipping {
+  color: #39B54A;
 }

@@ -14,11 +14,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <header className="App-header">
-          <img 
-          src="https://logodownload.org/wp-content/uploads/2016/08/Mercado-Livre-logo.png"
-          className="logo"
-          height="100px"
-          />
+          <Link to="/" className="logo">
+            <img 
+              src="https://logodownload.org/wp-content/uploads/2016/08/Mercado-Livre-logo.png"
+              height="100px"
+            />
+          </Link>
           <Link to="/carrinho" className="cart-icon">
             <img
               data-testid="shopping-cart-button"
