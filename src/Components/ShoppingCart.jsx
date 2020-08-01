@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import CadaItem from './CadaItem';
-import CarrinhoVazio from './CarrinhoVazio';
+import EachItem from './EachItem';
+import EmptyCart from './EmptyCart';
 import '../App.css'
 import './ShoppingCart.css'
 
@@ -77,7 +77,7 @@ class Carrinho extends Component {
     const { carrinho } = this.state;
     if (carrinho.length === 0) {
       return (
-        <CarrinhoVazio />
+        <EmptyCart />
       );
     }
     return (
@@ -85,7 +85,7 @@ class Carrinho extends Component {
 
         <ul className="shopping-cart-items-container">
           {carrinho.map((item) => (
-            <CadaItem
+            <EachItem
               key={item.id}
               item={item}
               aumentaQuantidade={this.aumentaQuantidade}

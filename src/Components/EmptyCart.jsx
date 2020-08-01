@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css'
-import './CarrinhoVazio.css'
+import './EmptyCart.css'
 
-class CarrinhoVazio extends Component {
+class EmptyCart extends Component {
   render() {
     return (
       <div className="empty-cart-page">
@@ -19,4 +19,4 @@ class CarrinhoVazio extends Component {
   }
 }
 
-export default CarrinhoVazio;
+export default EmptyCart;

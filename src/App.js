@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Checkout from './Components/Checkout';
 import DetailedView from './Components/DetailedView';
-import NavBarCarrinho from './Components/NavBar-Carrinho';
+import CartIcon from './Components/NavBar-Carrinho';
 import ProductListing from './Components/ProductListing';
 import ShoppingCart from './Components/ShoppingCart';
 import './index.css';
@@ -28,7 +28,7 @@ class App extends Component {
               height="50px"
             />
           </Link>
-          <NavBarCarrinho qtdProdutos={ShoppingCart.status} />
+          <CartIcon qtdProdutos={ShoppingCart.status} />
         </header>
         <Switch>
           <Route exact path="/" component={ProductListing} />

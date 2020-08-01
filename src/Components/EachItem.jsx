@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../App.css'
-import './CadaItem.css'
+import './EachItem.css'
 
-class CadaItem extends Component {
+class EachItem extends Component {
   render() {
     const { aumentaQuantidade, diminuiQuantidade, deletaItem, item } = this.props;
     const { id, title, price, quantity, shipping, thumbnail } = item;
@@ -45,4 +45,4 @@ class CadaItem extends Component {
   }
 }
 
-export default CadaItem;
+export default EachItem;

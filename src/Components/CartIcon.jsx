@@ -1,7 +1,7 @@
 import React from 'react';
 import '../App.css'
 
-class NavBarCarrinho extends React.Component {
+class CartIcon extends React.Component {
   render() {
     return (
       <nav>
@@ -15,4 +15,4 @@ class NavBarCarrinho extends React.Component {
   }
 }
 
-export default NavBarCarrinho;
+export default CartIcon;
