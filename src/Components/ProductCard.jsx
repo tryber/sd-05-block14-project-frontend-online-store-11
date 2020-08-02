@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import ShoppingCart from './ShoppingCart';
 import '../App.css'
-import './ProductCard.css';
+import './style/ProductCard.css';
 
 const ButtonC = (props) => (
   <div>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import EachItem from './EachItem';
 import EmptyCart from './EmptyCart';
 import '../App.css'
-import './ShoppingCart.css'
+import './style/ShoppingCart.css'
 
 const produto = [];
 // let status = 0;

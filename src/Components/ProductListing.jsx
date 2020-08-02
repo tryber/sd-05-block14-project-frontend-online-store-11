@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import * as api from '../services/api';
 import ProductCard from './ProductCard';
 import SearchBar from './SearchBar';
-import './ProductListing.css';
 import '../App.css'
+import './style/ProductListing.css';
 
 // import categories from '../__mocks__/categories';
 

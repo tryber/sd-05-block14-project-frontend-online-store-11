@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './DetailedView.css';
 import Review from './Review';
 import ShoppingCart from './ShoppingCart';
 import '../App.css'
+import './style/DetailedView.css';
 
 class DetailedView extends Component {
   constructor(props) {
@@ -34,7 +34,7 @@ class DetailedView extends Component {
               onClick={() => ShoppingCart.adicionaProduto(this.state)}
               type="button"
             >
-              Adicionar
+              Adicionar ao carrinho
             </button>
           </div>
           <img

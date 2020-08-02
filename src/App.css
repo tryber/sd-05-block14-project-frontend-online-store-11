@@ -2,13 +2,14 @@
 
 * {
   font-family: 'Lato', sans-serif;
-  color: #666;
+  color: #333;
   text-decoration: none;
   list-style: none;
 }
 
 body {
-  overflow-x: hidden
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .App {

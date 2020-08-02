@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Checkout.css';
+import './style/Checkout.css';
 import '../App.css'
 
 class Checkout extends Component {
@@ -16,11 +16,11 @@ class Checkout extends Component {
     this.state.total = this.state.total + (item.price * item.quantity);
     console.log(this.state.total);
     return (
-      <li className="product-checkout" key={item.id}>
+      <li className="product-checkout-item" key={item.id}>
         
         <div className="product-info-checkout" >
           <img src={item.thumbnail} alt={item.title} />
-          <div data-testid="shopping-cart-product-name">{item.title}</div>
+          <div data-testid="shopping-cart-product-name" className="checkout-product-name">{item.title}</div>
           <div data-testid="shopping-cart-product-quantity">Unidades: {item.quantity}</div>
           <div className="checkout-price">R$: {item.price}</div>
         </div>
@@ -33,16 +33,16 @@ class Checkout extends Component {
     return (
       <div className="checkout-page">
         <section className="checkout-products">
-          <h3>Revise seus Produtos</h3>
+          <h3 className="checkout-title">Revise seus Produtos</h3>
           <ul className="final-product-list">
             {this.state.cart.map((item) => this.finalProductList(item))}
           </ul>
-          <h4>Total: {(this.state.total).toFixed(2)}</h4>
+          <h3 className="total-price">Total: {(this.state.total).toFixed(2)}</h3>
         </section>
 
-        <section className="checkout-info">
+        <section className="checkout-client-info">
           <h3>Informações do Comprador</h3>
-          <form>
+          <form className="checkout-form">
             <input data-testid="checkout-fullname" placeholder="Nome Completo" type="text" />
             <input data-testid="checkout-email" placeholder="Email" type="text" />
             <input data-testid="checkout-cpf" placeholder="CPF" type="text" />

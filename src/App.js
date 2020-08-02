@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 import Checkout from './Components/Checkout';
 import DetailedView from './Components/DetailedView';
-import CartIcon from './Components/NavBar-Carrinho';
+import CartIcon from './Components/CartIcon';
 import ProductListing from './Components/ProductListing';
 import ShoppingCart from './Components/ShoppingCart';
 import './index.css';

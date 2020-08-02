@@ -4,23 +4,40 @@
   flex-direction: column;
 }
 
-.checkout-products , .checkout-info {
+.checkout-page h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0;
+  display: inline-block;
+}
+
+.checkout-title {
+  padding-bottom: 0;
+}
+
+.total-price h3 {
+  position: relative;
+  padding-right: 5%;
+  margin-right: 5%;
+  text-align: right;
+}
+
+.checkout-products , .checkout-client-info {
   border-radius: 6px;
   display: flex;
   flex-direction: column;
   margin: 2%;
   padding: 2%;
-  width: 60%;
+  width: 90%;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px
 }
 
-.product-checkout{
+.product-checkout-item {
   border-bottom: 1px solid lightgray;
   padding: 5%;
 }
 
-.product-checkout:first-child {
+.product-checkout-item:first-child {
   border-top: 1px solid lightgray;
 } 
 
@@ -41,25 +58,29 @@
   width: 500px;
 }
 
-.checkout-info input {
+.checkout-form {
+  text-align: center;
+}
+
+.checkout-client-info input {
   height: 1.8rem;
   margin: 0.8rem;
   width: 40%;
   padding: 12px 10px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border: none;
   background-color: transparent;
   border-bottom: 2px solid black;
 }
 
-.checkout-info input:focus {
+.checkout-client-info input:focus {
   transition: 0.2s ease-in;
   color: black;
   border-radius: 2px;
   border-color:  #3483FA;
 }
 
-.checkout-info button{
+.checkout-client-info button{
   background-color: transparent;
   color: #3483FA;
   font-weight: 900;
@@ -71,12 +92,7 @@
   line-height: 48px;
 }
 
-.checkout-info button:hover {
+.checkout-client-info button:hover {
   background-color: rgb(30, 109, 255, 0.3);
   transition: 0.2s ease-in 
-}
-
-.checkout-page h3 {
-  color: black;
-  padding-bottom: 5%;
 }

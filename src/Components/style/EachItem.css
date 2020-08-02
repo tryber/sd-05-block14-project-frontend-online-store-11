@@ -8,6 +8,10 @@
   font-weight: 500;
 }
 
+.each-item p {
+  color: #333
+}
+
 .shopping-cart-price {
   font-weight: 300;
 }
