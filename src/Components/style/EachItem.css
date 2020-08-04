@@ -1,0 +1,75 @@
+.each-item {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  font-weight: 500;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.each-item p {
+  color: #333;
+}
+
+.shopping-cart-price {
+  font-weight: 300;
+}
+
+.each-item:first-child {
+  border-top: 1px solid lightgray;
+}
+
+.quantity-control {
+  display: flex;
+  flex-flow: row wrap;
+  margin-right: 0;
+  margin-top: 20%;
+  min-width: 200px;
+  width: 200px;
+}
+
+.qt-btns , .qt-nb {
+  background-color: transparent;
+  border: 0.5px solid lightgray;
+  border-radius: 4px;
+  color: #3483fa;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 40px;
+  margin: 5%;
+  padding: 2px 18px;
+}
+
+.qt-nb {
+  color: black;
+  font-weight: 500;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.qt-btns:hover {
+  border: 0.5px solid lightgray;
+  color: #5a9cf1;
+}
+
+.db {
+  background-color: transparent;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 40px;
+  margin-left: 55px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.db:hover {
+  color: tomato;
+}
+
+.info-cart {
+  width: 500px;
+}

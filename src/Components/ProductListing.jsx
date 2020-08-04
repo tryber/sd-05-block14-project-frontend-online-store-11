@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import * as api from '../services/api';
 import ProductCard from './ProductCard';
 import SearchBar from './SearchBar';
-import './ProductListing.css';
+import '../App.css';
+import './style/ProductListing.css';
+
 // import categories from '../__mocks__/categories';
 
 class ProductListing extends Component {
@@ -33,7 +35,6 @@ class ProductListing extends Component {
       searchProduct,
     );
     // ao clicar numa categoria, sobe um array com os produtos para o state
-    console.log(categoryId);
     this.setState({
       selectedCategory: categoryId,
       arrayFetch: produtos.results,
@@ -61,28 +62,30 @@ class ProductListing extends Component {
   render() {
     const { categories, arrayFetch } = this.state;
     return (
-      <div className="left-side">
-        <div className="categories-list">
-          {categories.map((element) => (
-            <button
-              data-testid="category"
-              type="button"
-              key={element.id}
-              onClick={() => this.onClickHandler(element.id)}
-            >
-              {element.name}
-            </button>
-          ))}
-        </div>
-        <div className="right-side">
-          <SearchBar
-            change={this.handleInputChange}
-            click={this.handleInputClick}
-          />
+      <div>
+        <div className="left-side">
+          <div className="categories-list">
+            {categories.map((element) => (
+              <button
+                data-testid="category"
+                type="button"
+                key={element.id}
+                onClick={() => this.onClickHandler(element.id)}
+              >
+                {element.name}
+              </button>
+            ))}
+          </div>
+          <div className="right-side">
+            <SearchBar
+              change={this.handleInputChange}
+              click={this.handleInputClick}
+            />
 
-          {this.state.searchProduct}
+            {/* {this.state.searchProduct} */}
 
-          <ProductCard items={arrayFetch} />
+            <ProductCard items={arrayFetch} />
+          </div>
         </div>
       </div>
     );

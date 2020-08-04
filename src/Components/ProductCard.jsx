@@ -1,22 +1,29 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ProductCard.css';
-import ShoppingCart from './Shopping-Cart';
+import ShoppingCart from './ShoppingCart';
+import '../App.css';
+import './style/ProductCard.css';
 
 const ButtonC = (props) => (
   <div>
     <button
       data-testid="product-add-to-cart"
-      onClick={() => ShoppingCart.adicionaProduto(props.item)}
+      onClick={(event) => {
+        const trg = event.target;
+        trg.style.backgroundColor = '#6699cc';
+        ShoppingCart.adicionaProduto(props.item);
+      }}
       type="button"
     >
-      adicinar
+      adicionar ao carrinho
     </button>
   </div>
 );
 
 const FreteGratis = (props) => (
-  (props.isFree) ? <p data-testid="free-shipping">frete grátis</p> : null
+  (props.isFree)
+  ? <p data-testid="free-shipping" style={{ color: 'green' }}>Frete Grátis</p>
+  : null
 );
 
 const Card = (props) => (
@@ -27,6 +34,7 @@ const Card = (props) => (
         to={{
           pathname: `/details/${item.id}`,
           state: {
+            detailsIsProductAvailable: item.available_quantity,
             detailsId: item.id,
             detailsTitle: item.title,
             detailsThumbnail: item.thumbnail,
@@ -35,8 +43,8 @@ const Card = (props) => (
           },
         }}
       >
-        <img src={item.thumbnail} alt={item.title} />
-        <p>{`${item.title} - $ ${item.price}`}</p>
+        <img src={item.thumbnail} alt={item.title} className="img-product-card" />
+        <p className="card-item-title">{item.title}</p> <p>R$ {item.price}</p>
         <FreteGratis isFree={item.shipping.free_shipping} />
 
       </Link>

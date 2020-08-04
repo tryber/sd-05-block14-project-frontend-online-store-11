@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import './Searchbar.css';
+import '../App.css';
+import './style/SearchBar.css';
+
 
 class SearchBar extends Component {
   render() {
@@ -9,6 +11,8 @@ class SearchBar extends Component {
           data-testid="query-input"
           onChange={this.props.change}
           type="text"
+          autoComplete="off"
+          spellCheck="off"
           placeholder="Digite algum termo de pesquisa ou escolha uma categoria."
         />
         <button
@@ -18,7 +22,7 @@ class SearchBar extends Component {
         >
           Buscar
         </button>
-        <p data-testid="home-initial-message">
+        <p data-testid="home-initial-message" style={{ visibility: 'hidden' }}>
           Digite algum termo de pesquisa ou escolha uma categoria.
         </p>
       </div>

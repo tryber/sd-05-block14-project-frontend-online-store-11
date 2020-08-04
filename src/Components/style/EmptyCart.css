@@ -1,0 +1,40 @@
+.empty-cart-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-cart {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 2px 0;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 2%;
+  text-align: center;
+  width: 50%;
+}
+
+.ir-as-compras {
+  border-radius: 6px;
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.empty-message {
+  font-weight: 300;
+}
+
+.ir-as-compras:hover {
+  color: #39b54a;
+  transition: 0.2s;
+}
+
+.empty-img {
+  margin: 1rem auto auto;
+}

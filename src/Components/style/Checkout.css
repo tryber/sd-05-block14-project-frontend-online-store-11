@@ -1,0 +1,102 @@
+.checkout-page {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.7rem;
+}
+
+h3 {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.checkout-title {
+  padding: 0 5%;
+}
+
+.total-price {
+  padding: 0 6% 3%;
+  position: relative;
+  text-align: right;
+}
+
+.checkout-products , .checkout-client-info {
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 2px 0;
+  display: flex;
+  flex-direction: column;
+  margin: 2%;
+  padding: 2%;
+  width: 90%;
+}
+
+.product-checkout-item {
+  border-bottom: 1px solid lightgray;
+  padding: 5%;
+}
+
+.product-checkout-item:first-child {
+  border-top: 1px solid lightgray;
+}
+
+.final-product-list {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 500;
+  justify-content: space-between;
+  padding: 2%;
+}
+
+.checkout-price {
+  font-weight: 300;
+}
+
+.product-info-checkout {
+  width: 500px;
+}
+
+.checkout-form {
+  text-align: center;
+}
+
+.checkout-client-info input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 1.1rem;
+  height: 1.8rem;
+  margin: 0.8rem;
+  padding: 12px 10px;
+  width: 40%;
+}
+
+.checkout-client-info input:focus {
+  border-color: #3483fa;
+  border-radius: 2px;
+  color: black;
+  transition: 0.2s ease-in;
+}
+
+.checkout-client-info button {
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  color: #3483fa;
+  font-size: 1.2rem;
+  font-weight: 900;
+  line-height: 48px;
+  margin-top: 1rem;
+  padding: 0 24px;
+}
+
+.checkout-client-info button:hover {
+  background-color: rgba(30, 109, 255, 0.3);
+  transition: 0.2s ease-in;
+}
+
+.client-info-h3 {
+  padding: 0 5% 5%;
+}

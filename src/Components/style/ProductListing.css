@@ -1,0 +1,41 @@
+.left-side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.categories-list {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.categories-list button {
+  background-color: #eee;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin: 10px;
+  padding: 5%;
+  text-align: justify;
+  width: 200px;
+}
+
+.categories-list button:hover {
+  background-color: rgb(180, 180, 180);
+  color: black;
+  transition: 0.3s;
+}
+
+.free-shipping {
+  color: #39b54a;
+}
