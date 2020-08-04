@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import EachItem from './EachItem';
 import EmptyCart from './EmptyCart';
-import '../App.css'
-import './style/ShoppingCart.css'
+import '../App.css';
+import './style/ShoppingCart.css';
 
 const produto = [];
 // let status = 0;
@@ -23,8 +23,8 @@ class Carrinho extends Component {
       total: 0,
     };
     this.insereProduto = this.insereProduto.bind(this);
-    this.aumentaQuantidade = this.aumentaQuantidade.bind(this);
-    this.diminuiQuantidade = this.diminuiQuantidade.bind(this);
+    this.aumentar = this.aumentar.bind(this);
+    this.diminuir = this.diminuir.bind(this);
     this.deletaItem = this.deletaItem.bind(this);
   }
 
@@ -50,7 +50,7 @@ class Carrinho extends Component {
     });
   }
 
-  aumentaQuantidade(counter) {
+  aumentar(counter) {
     const { carrinho } = this.state;
     const index = carrinho.indexOf(counter);
     carrinho[index] = { ...carrinho[index] };
@@ -59,7 +59,7 @@ class Carrinho extends Component {
     // console.log(carrinho[index]);
   }
 
-  diminuiQuantidade(counter) {
+  diminuir(counter) {
     const { carrinho } = this.state;
     const index = carrinho.indexOf(counter);
     carrinho[index] = { ...carrinho[index] };
@@ -75,37 +75,28 @@ class Carrinho extends Component {
 
   render() {
     const { carrinho } = this.state;
-    if (carrinho.length === 0) {
-      return (
-        <EmptyCart />
-      );
-    }
+    if (carrinho.length === 0) { return (<EmptyCart />); }
     return (
       <div className="shopping-cart-page">
-
         <ul className="shopping-cart-items-container">
           {carrinho.map((item) => (
             <EachItem
               key={item.id}
               item={item}
-              aumentaQuantidade={this.aumentaQuantidade}
-              diminuiQuantidade={this.diminuiQuantidade}
+              aumentar={this.aumentar}
+              diminuir={this.diminuir}
               deletaItem={this.deletaItem}
             />
           ))}
           <div className="cart-links">
-          <Link to="/"><button className="continuar-comprando">Continuar comprando</button></Link>
-          <Link
-          to={{
-            pathname: '/checkout',
-            state: { cart: this.state.carrinho },
-          }}
-          ><button className="finalizar-compra" data-testid="checkout-products">Finalizar Compra</button>
-          </Link>
-        </div>
+            <Link to="/">
+              <button className="continuar-comprando">Continuar comprando</button>
+            </Link>
+            <Link to={{ pathname: '/checkout', state: { cart: this.state.carrinho } }}>
+              <button className="fc" data-testid="checkout-products">Finalizar Compra</button>
+            </Link>
+          </div>
         </ul>
-        
-        
       </div>
     );
   }

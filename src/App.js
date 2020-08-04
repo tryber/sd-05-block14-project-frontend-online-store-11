@@ -15,9 +15,10 @@ class App extends Component {
       <BrowserRouter>
         <header className="App-header">
           <Link to="/" className="logo">
-            <img 
+            <img
               src="https://logodownload.org/wp-content/uploads/2016/08/Mercado-Livre-logo.png"
               height="100px"
+              alt="logo"
             />
           </Link>
           <Link to="/carrinho" className="cart-icon">

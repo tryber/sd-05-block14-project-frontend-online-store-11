@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style/Checkout.css';
-import '../App.css'
+import '../App.css';
 
 class Checkout extends Component {
   constructor(props) {
@@ -17,14 +17,12 @@ class Checkout extends Component {
     console.log(this.state.total);
     return (
       <li className="product-checkout-item" key={item.id}>
-        
         <div className="product-info-checkout" >
           <img src={item.thumbnail} alt={item.title} />
-          <div data-testid="shopping-cart-product-name" className="checkout-product-name">{item.title}</div>
+          <div data-testid="shopping-cart-product-name">{item.title}</div>
           <div data-testid="shopping-cart-product-quantity">Unidades: {item.quantity}</div>
           <div className="checkout-price">R$: {item.price}</div>
         </div>
-        
       </li>
     );
   }
@@ -41,7 +39,7 @@ class Checkout extends Component {
         </section>
 
         <section className="checkout-client-info">
-          <h3>Informações do Comprador</h3>
+          <h3 className="client-info-h3">Informações do Comprador</h3>
           <form className="checkout-form">
             <input data-testid="checkout-fullname" placeholder="Nome Completo" type="text" />
             <input data-testid="checkout-email" placeholder="Email" type="text" />

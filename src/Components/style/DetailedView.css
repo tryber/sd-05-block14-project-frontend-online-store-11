@@ -1,42 +1,42 @@
 .detailed-view-page {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .card-info-details {
+  background-color: white;
   border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 1px 2px 0;
   display: flex;
   flex-direction: column;
   margin: 2%;
   padding: 2%;
   width: 90%;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 2px 0px
 }
 
 .shopping-cart-link {
   display: flex;
   justify-content: center;
   padding: 2rem;
-  width: 50%;
   position: absolute;
-  right: 0
+  right: 0;
+  width: 50%;
 }
 
-.shopping-cart-link button { 
-  background-color: #3483FA ;
-  color: white;
-  border-radius: 4px;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+.shopping-cart-link button {
+  background-color: #3483fa;
   border: none;
-  padding: 0.7rem;
+  border-radius: 4px;
+  color: white;
+  font-size: 0.8rem;
   margin-top: 1rem;
+  padding: 0.7rem;
+  text-transform: uppercase;
 }
 
 .shopping-cart-link button:hover {
-  background-color: #2968C8;
+  background-color: #2968c8;
   color: white;
 }
 

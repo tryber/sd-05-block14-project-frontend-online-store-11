@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ShoppingCart from './ShoppingCart';
-import '../App.css'
+import '../App.css';
 import './style/ProductCard.css';
 
 const ButtonC = (props) => (
@@ -9,8 +9,9 @@ const ButtonC = (props) => (
     <button
       data-testid="product-add-to-cart"
       onClick={(event) => {
-        event.target.style.backgroundColor = "#6699cc";
-        ShoppingCart.adicionaProduto(props.item)
+        const trg = event.target;
+        trg.style.backgroundColor = '#6699cc';
+        ShoppingCart.adicionaProduto(props.item);
       }}
       type="button"
     >
@@ -20,7 +21,9 @@ const ButtonC = (props) => (
 );
 
 const FreteGratis = (props) => (
-  (props.isFree) ? <p data-testid="free-shipping" style={{color: "green"}}>Frete Grátis</p> : null
+  (props.isFree)
+  ? <p data-testid="free-shipping" style={{ color: 'green' }}>Frete Grátis</p>
+  : null
 );
 
 const Card = (props) => (
@@ -40,7 +43,7 @@ const Card = (props) => (
           },
         }}
       >
-        <img src={item.thumbnail} alt={item.title} className="img-product-card"/>
+        <img src={item.thumbnail} alt={item.title} className="img-product-card" />
         <p className="card-item-title">{item.title}</p> <p>R$ {item.price}</p>
         <FreteGratis isFree={item.shipping.free_shipping} />
 

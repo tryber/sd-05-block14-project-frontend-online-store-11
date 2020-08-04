@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Review from './Review';
 import ShoppingCart from './ShoppingCart';
-import '../App.css'
+import '../App.css';
 import './style/DetailedView.css';
 
 class DetailedView extends Component {
@@ -26,7 +26,7 @@ class DetailedView extends Component {
   render() {
     return (
       <div className="detailed-view-page">
-        
+
         <div key={this.state.id} className="card-info-details">
           <div className="shopping-cart-link">
             <button

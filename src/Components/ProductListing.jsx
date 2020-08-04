@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import * as api from '../services/api';
 import ProductCard from './ProductCard';
 import SearchBar from './SearchBar';
-import '../App.css'
+import '../App.css';
 import './style/ProductListing.css';
 
 // import categories from '../__mocks__/categories';
@@ -63,30 +63,30 @@ class ProductListing extends Component {
     const { categories, arrayFetch } = this.state;
     return (
       <div>
-      <div className="left-side">
-        <div className="categories-list">
-          {categories.map((element) => (
-            <button
-              data-testid="category"
-              type="button"
-              key={element.id}
-              onClick={() => this.onClickHandler(element.id)}
-            >
-              {element.name}
-            </button>
-          ))}
-        </div>
-        <div className="right-side">
-          <SearchBar
-            change={this.handleInputChange}
-            click={this.handleInputClick}
-          />
+        <div className="left-side">
+          <div className="categories-list">
+            {categories.map((element) => (
+              <button
+                data-testid="category"
+                type="button"
+                key={element.id}
+                onClick={() => this.onClickHandler(element.id)}
+              >
+                {element.name}
+              </button>
+            ))}
+          </div>
+          <div className="right-side">
+            <SearchBar
+              change={this.handleInputChange}
+              click={this.handleInputClick}
+            />
 
-          {/* {this.state.searchProduct} */}
+            {/* {this.state.searchProduct} */}
 
-          <ProductCard items={arrayFetch} />
+            <ProductCard items={arrayFetch} />
+          </div>
         </div>
-      </div>
       </div>
     );
   }

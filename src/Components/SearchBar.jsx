@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css'
+import '../App.css';
 import './style/SearchBar.css';
 
 
@@ -22,7 +22,7 @@ class SearchBar extends Component {
         >
           Buscar
         </button>
-        <p data-testid="home-initial-message" style={{visibility: "hidden"}}>
+        <p data-testid="home-initial-message" style={{ visibility: 'hidden' }}>
           Digite algum termo de pesquisa ou escolha uma categoria.
         </p>
       </div>
